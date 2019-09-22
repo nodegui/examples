@@ -7,7 +7,7 @@ import {
   FlexLayout,
   QLabel
 } from "@nodegui/nodegui";
-import { BaseWidgetEvents } from "@nodegui/nodegui/dist/src/lib/core/EventWidget";
+import { BaseWidgetEvents } from "@nodegui/nodegui/dist/lib/core/EventWidget";
 
 // ===============
 //  UI AND DESIGN
