@@ -1,5 +1,4 @@
 import {
-  QMenuBar,
   QKeySequence,
   QApplication,
   QMainWindow,
@@ -18,10 +17,8 @@ const tray = new QSystemTrayIcon();
 tray.setIcon(trayIcon);
 tray.show();
 tray.setToolTip("hello");
-const menu = new QMenu();
-const menuBar = new QMenuBar();
-win.setMenuBar(menuBar);
 
+const menu = new QMenu();
 tray.setContextMenu(menu);
 
 // -------------------
