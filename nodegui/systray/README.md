@@ -4,7 +4,7 @@ This example showcases how to build a nodegui app that runs on systray. Also, sh
 
 ### Screenshots
 
-<img alt="demo_mac" src="https://github.com/nodegui/examples/raw/master/nodegui/systray/assets/systray-example.png" height="800" />
+<img alt="demo_mac" src="https://github.com/nodegui/examples/raw/master/nodegui/systray/assets/systray-example.png" width="100%" />
 
 To run the demo:
 
