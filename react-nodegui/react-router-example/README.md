@@ -1,4 +1,4 @@
-# react-nodegui-starter
+# Example usage with React router
 
 **Clone and run for a quick way to see React NodeGui and react router in action.**
 
