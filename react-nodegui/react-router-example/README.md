@@ -1,5 +1,7 @@
 # Example usage with React router
 
+This example shows how to use react-router v5 with react-nodegui. Its uses MemoryRouter (the router which is used in React Native as well). This is a basic example and contains basic routing. Check `routes.tsx` for more details.
+
 **Clone and run for a quick way to see React NodeGui and react router in action.**
 
 ## To Use

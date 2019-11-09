@@ -10,7 +10,13 @@ export default function About() {
     []
   );
   return (
-    <View>
+    <View
+      style={`
+        height: '100%'; 
+        align-items: 'center';
+        justify-content: 'center';
+    `}
+    >
       <Text>About</Text>
       <Text>You are now looking at the About Page 😱</Text>
       <Button on={handler} text={`Go to Home`}></Button>

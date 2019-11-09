@@ -10,7 +10,13 @@ export default function Home() {
     []
   );
   return (
-    <View>
+    <View
+      style={`
+        height: '100%'; 
+        align-items: 'center';
+        justify-content: 'center';
+      `}
+    >
       <Text>Home Page</Text>
       <Text>You are now looking at Home Page 🤓</Text>
       <Button on={handler} text="Go to about"></Button>
