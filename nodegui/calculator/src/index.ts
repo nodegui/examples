@@ -5,9 +5,10 @@ import {
   QWidget,
   QKeyEvent,
   FlexLayout,
-  QLabel
+  QLabel,
+  BaseWidgetEvents,
+  NativeElement
 } from "@nodegui/nodegui";
-import { BaseWidgetEvents } from "@nodegui/nodegui/dist/lib/core/EventWidget";
 
 // ===============
 //  UI AND DESIGN
@@ -32,16 +33,19 @@ const getButton = (
 
 // Main Window
 const win = new QMainWindow();
-win.resize(230, 300);
+win.setFixedSize(230, 300);
 
 // Root view
 const rootView = new QWidget();
-win.addEventListener(BaseWidgetEvents.KeyRelease, nativeEvent => {
-  const keyEvt = new QKeyEvent(nativeEvent);
-  const text = keyEvt.text();
-  const isNotNumber = isNaN(parseInt(text));
-  onBtnClick(text, isNotNumber ? "command" : "value");
-});
+win.addEventListener(
+  BaseWidgetEvents.KeyRelease,
+  (nativeEvent: NativeElement) => {
+    const keyEvt = new QKeyEvent(nativeEvent);
+    const text = keyEvt.text();
+    const isNotNumber = isNaN(parseInt(text));
+    onBtnClick(text, isNotNumber ? "command" : "value");
+  }
+);
 rootView.setObjectName("rootView"); //This is like ids in web world
 win.setCentralWidget(rootView);
 const rootStyleSheet = `
@@ -52,6 +56,7 @@ const rootStyleSheet = `
 
 QPushButton {
   min-width: '25%';
+  height: 60px;
   border: 1px solid black;
 }
 
@@ -78,7 +83,6 @@ QPushButton:pressed {
 
 #row0,#row1,#row2,#row3,#row4 {
   flex: 1;
-  align-items: stretch;
   justify-content: space-between;
   flex-direction: row;
 }

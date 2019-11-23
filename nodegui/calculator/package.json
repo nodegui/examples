@@ -2,17 +2,25 @@
   "name": "calculator",
   "version": "1.0.0",
   "description": "This example showcases how to build a basic calculator clone.",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "author": "Atul R <atulanand94@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "start": "tsc && qode ./dist/index.js"
+    "build": "webpack -p",
+    "start": "webpack && qode ./dist/index.js",
+    "debug": "webpack && qode --inspect ./dist/index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@nodegui/nodegui": "^0.1.9"
+    "@nodegui/nodegui": "^0.6.5"
   },
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "typescript": "^3.5.3"
+    "@types/node": "^12.12.8",
+    "file-loader": "^4.2.0",
+    "node-loader": "^0.6.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
