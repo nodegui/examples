@@ -3,11 +3,11 @@ import {
   PenStyle,
   QColor,
   QMainWindow,
-  QMainWindowEvents,
   QPainter,
   QPoint,
   QWidget,
-  RenderHint
+  RenderHint,
+  WidgetEventTypes
 } from "@nodegui/nodegui";
 
 const win = new QMainWindow();
@@ -23,7 +23,7 @@ const secondColor = new QColor(0, 0, 0);
 center.setLayout(layout);
 win.setWindowTitle("Analog Clock");
 win.resize(200, 200);
-const side = Math.min(win.geometry().width, win.geometry().height);
+const side = Math.min(win.geometry().width(), win.geometry().height());
 
 function repaint(): void {
   win.repaint();
@@ -31,12 +31,12 @@ function repaint(): void {
 }
 
 setTimeout(repaint, 1000);
-win.addEventListener(QMainWindowEvents.Paint, () => {
+win.addEventListener(WidgetEventTypes.Paint, () => {
   const time = new Date();
 
   const painter = new QPainter(win);
   painter.setRenderHint(RenderHint.Antialiasing);
-  painter.translate(win.geometry().width / 2, win.geometry().height / 2);
+  painter.translate(win.geometry().width() / 2, win.geometry().height() / 2);
   painter.scale(side / 200.0, side / 200.0);
 
   painter.setPen(PenStyle.NoPen);
