@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View, Button, useEventHandler } from "@nodegui/react-nodegui";
 import { useHistory } from "react-router";
-import { QPushButtonEvents } from "../../../../../nodegui/dist";
+import { QPushButtonSignals } from "../../../../../nodegui/dist";
 
 export default function About() {
   const history = useHistory();
-  const handler = useEventHandler(
-    { [QPushButtonEvents.clicked]: () => history.goBack() },
+  const handler = useEventHandler<QPushButtonSignals>(
+    { clicked: () => history.goBack() },
     []
   );
   return (
