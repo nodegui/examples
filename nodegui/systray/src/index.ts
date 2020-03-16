@@ -8,7 +8,7 @@ import {
   QAction
 } from "@nodegui/nodegui";
 import path from "path";
-import { Dock } from "@nodegui/nodegui-os-utils";
+import { Dock } from "@nodegui/os-utils";
 const icon = require("../assets/nodegui_white.png");
 
 const win = new QMainWindow();
