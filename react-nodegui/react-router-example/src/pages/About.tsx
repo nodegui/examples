@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, Button, useEventHandler } from "@nodegui/react-nodegui";
 import { useHistory } from "react-router";
-import { QPushButtonSignals } from "../../../../../nodegui/dist";
+import { QPushButtonSignals } from "@nodegui/nodegui";
 
 export default function About() {
   const history = useHistory();
