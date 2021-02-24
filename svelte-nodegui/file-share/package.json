@@ -1,7 +1,8 @@
 {
-  "description": "NodeGUI Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "repository": "<fill-your-repository-here>",
+  "name": "file-share",
+  "description": "Sample Svelte NodeGUI Application",
+  "license": "MIT",
+  "repository": "git@github.com:nodegui/examples.git",
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack -p --watch --mode=development",
@@ -32,6 +33,6 @@
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
-  "readme": "NodeGUI Application",
+  "readme": "https://github.com/nodegui/examples/blob/master/svelte-nodegui/file-share/readme.md",
   "main": "app.js"
 }
